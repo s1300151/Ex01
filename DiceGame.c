@@ -2,8 +2,17 @@
 #include <stdlib.h>
 #include <time.h>
 
+void great(){
+  char name[10];
+  printf("What is your name?\n>");
+  scanf("%s", &name);
+  printf("Hello, %s!\n", name);
+}
+
 int main(){
   int i, dice, total=0;
+
+  great();
 
   srand(time(NULL));
   printf("Rolling dice...\n");
