@@ -2,8 +2,17 @@
 #include <stdlib.h>
 #include <time.h>
 
+void great(){
+  char name[10];
+  printf("What is your name?\n>");
+  scanf("%s", &name);
+  printf("Hello, %s!\n", name);
+}
+
 int main(){
   int i, dice, total=0;
+
+  great();
 
   srand(time(NULL));
   printf("Rolling dice...\n");
@@ -13,6 +22,12 @@ int main(){
     total+=dice;
   }
   printf("Total value: %d\n", total);
+
+  if(total>7){
+    printf("You won!\n");
+  } else {
+    printf("You lost.\n");
+  }
 
   return 0;
 }
